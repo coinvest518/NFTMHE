@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const getCapsValue = async () => {\n  const result = await fetch(\"https://api.coingecko.com/api/v3/simple/price?ids=coin-capsule&vs_currencies=usd\");\n  if (!result.ok) throw new Error();\n  const price = (await result.json())['coin-capsule'].usd;\n  return price;\n};","map":null,"metadata":{},"sourceType":"module"}
